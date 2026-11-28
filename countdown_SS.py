@@ -117,14 +117,14 @@ def blue_button(key, label):
     with stylable_container(
         key, css_styles="button {background-color: #0349b3; color: white;}"
     ):
-        return st.button(label, type="secondary", use_container_width=True, key=key + "_btn")
+        return st.button(label, type="tertiary", use_container_width=True, key=key + "_btn")
 
 
 def grey_button(key, label):
     with stylable_container(
         key, css_styles="button {background-color: #86a3be; color: white;}"
     ):
-        return st.button(label, type="secondary", use_container_width=True, key=key + "_btn")
+        return st.button(label, type="tertiary", use_container_width=True, key=key + "_btn")
 
 
 # --------------------------------------------------------------- sidebar

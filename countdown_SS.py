@@ -196,29 +196,13 @@ if selected_main_menu == "Presentation":
 
 # ------------------------------------------------------------------- Q&A
 else:
-    col_10, col_20, col_30 = st.columns(3)
+    col_10, col_20 = st.columns(2)
     with col_10:
-        question_clicked = blue_button("qa_question", "Question")
+        answer_clicked = blue_button("qa_answer", "Question & Answer")
     with col_20:
         grey_button("qa_reset", "Reset")
-    with col_30:
-        answer_clicked = blue_button("qa_answer", "Answer")
 
     display = st.empty()
-
-    if question_clicked:
-        show(display, "GO !")
-        time.sleep(1)
-
-        def q_frame(remaining):
-            show(display, fmt(remaining))
-            # play_beep(FREQ, DURATION)
-
-        run_countdown(display, 1 * 60, q_frame)
-
-        show(display, "TIME IS UP !")
-        play_beep(FREQ * 3, DURATION * 2)
-        time.sleep(2)
 
     if answer_clicked:
 
@@ -227,7 +211,7 @@ else:
             if remaining <= 3:
                 play_beep(FREQ, DURATION)
 
-        run_countdown(display, 2 * 60, a_frame)
+        run_countdown(display, 3 * 60, a_frame)
 
         show(display, "TIME IS UP !")
         play_beep(FREQ * 4, DURATION * 2)

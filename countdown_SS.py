@@ -115,14 +115,14 @@ def run_countdown(slot, seconds, frame_fn):
 
 def blue_button(key, label):
     with stylable_container(
-        key, css_styles="button {background-color: #0349b3; color: white;}"
+        key, css_styles="button {background-color: #0349b3; color: white !important;}"
     ):
         return st.button(label, type="tertiary", use_container_width=True, key=key + "_btn")
 
 
 def grey_button(key, label):
     with stylable_container(
-        key, css_styles="button {background-color: #86a3be; color: white;}"
+        key, css_styles="button {background-color: #86a3be; color: white !important;}"
     ):
         return st.button(label, type="tertiary", use_container_width=True, key=key + "_btn")
 
